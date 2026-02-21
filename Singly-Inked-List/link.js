@@ -6,7 +6,7 @@ class Node {
         // Must create node storing value = val
         // Must initialize next pointer to null
         this.#value = val;
-        this.#next = next;
+        this.#next = null;
     }
 
     get value() {
@@ -17,16 +17,19 @@ class Node {
     set value(val) {
         // Must update stored value
         // No type restriction unless required by list contract
+        this.#value = val;
     }
 
     get next() {
         // Must return reference to next node
         // If no next node → return null
+        return this.#next;
     }
 
     set next(new_node) {
         // Must set next pointer to another Node or null
         // Must not break linked list structure
+        this.#next = new_node;
     }
 }
 
@@ -39,22 +42,31 @@ class SinglyLinkedList {
         // If iterable is iterable object:
         //   Must insert all elements in order using push_back
         // If iterable is single value → push_back once
+        if (iterable === undifine) {
+            return [];
+        }
+        if(iterable === object) {
+        
+        }
     }
 
     /* ================= Size & State ================= */
 
     size() {
         // Must return number of nodes in list
+        return this.#size;
     }
 
     isEmpty() {
         // Must return true if size === 0
+        return this.#size === 0;
     }
 
     clear() {
         // Must remove all nodes
         // Must set head = null
         // Must set size = 0
+        
     }
 
     /* ================= Front Access ================= */
